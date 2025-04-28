@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Curso de Desenho Profissional com Gilmar Marcel - Aprenda técnicas realistas com qualidade e criatividade.">
+    <title>Curso de Desenho Artístico Profissional com Gilmar Marcel</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: url('/imagens/background.webp') no-repeat center center;
+            background-size: cover;
+            color: #333;
+        }
+
+
+        header {
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 1rem;
+            margin: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .video_abertura {
+            width: 100%;
+            height: 100%;
+        }
+
+        header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            color: #5A4A3F;
+            margin-bottom: 1.5rem;
+            margin-top: 2%;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: #6B5C51;
+            margin-bottom: 2rem;
+        }
+
+        .preco {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #6B5C51;
+            line-height: 1.4;
+        }
+
+        .preco .de {
+            font-size: 1.2rem;
+            color: #a8a8a8;
+        }
+
+        .preco .por {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #D4AF37;
+        }
+
+        .preco strong {
+            color: #000;
+            /* Preto para o preço novo */
+        }
+
+
+        button {
+            background: linear-gradient(90deg, #D4AF37, #6B5C51);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 3rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            backdrop-filter: blur(6px);
+            background: rgba(255, 255, 255, 0.5);
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #5A4A3F;
+            text-align: center;
+        }
+
+        .depoimentos {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .depoimento {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .depoimento img {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .depoimento p {
+            font-size: 1rem;
+            color: #5A4A3F;
+        }
+
+        .videos {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .videos iframe {
+            flex: 0 0 auto;
+            width: 320px;
+            height: 180px;
+            margin-right: 1rem;
+            scroll-snap-align: center;
+            border-radius: 1rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            background: rgba(250, 250, 250, 0.8);
+            margin-top: 4rem;
+            border-top: 1px solid #ddd;
+        }
+
+        button {
+            background: linear-gradient(90deg, #D4AF37, #6B5C51);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <video src="Nova propaganda.mp4" controls preload="none"
+            poster="347605437_764179052378668_8550257514391535097_n.jpg"
+            style="  border-radius: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.2); width: 320px; height: 180px; object-fit: cover;"></video>
+        <h1>Transforme Seu Talento em Arte com Gilmar Marcel</h1>
+        <p>Aprenda técnicas realistas e desenvolva sua habilidade artística com um dos maiores mestres do desenho.</p>
+        <div class="preco" id="preco">
+            <span class="de">De <del>R$ 340,00</del></span><br>
+            <span class="por">Por apenas <strong style="color: #000;">R$ 160,00</strong></span>
+        </div>
+        <a href="https://go.hotmart.com/I99296302M?dp=1" target="_blank">
+            <button>Compre Agora</button>
+        </a>
+
+    </header>
+
+
+
+
+    <section>
+        <section>
+            <h2>Sobre Gilmar Marcel</h2>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+                <img src="foto-dele.jpg" alt="Foto de Gilmar Marcel"
+                    style="width: 200px; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+                <p style="text-align: center; max-width: 800px; font-size: 1.2rem; color: #5A4A3F;">
+                    Gilmar Marcel é um artista de renome, com mais de <strong>20 anos de experiência</strong> no ensino
+                    de desenho artístico e realista.
+                    Com uma abordagem única que une técnica refinada e expressão emocional, ele já ajudou milhares de
+                    alunos a despertar seu talento,
+                    mesmo aqueles que acreditavam não ter nenhuma habilidade. Seus métodos práticos e motivadores fazem
+                    do aprendizado uma jornada
+                    envolvente e transformadora.
+                </p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Depoimentos de Alunos</h2>
+            <div class="depoimentos">
+
+                <div class="depoimento">
+                    <img src="3.jpg" alt="Desenho Sérgio Otávio - Demon Slayer">
+                    <p>"Muito orgulho de ver minha evolução no desenho!" — Sérgio Otávio</p>
+                </div>
+                <div class="depoimento">
+                    <img src="4.jpg" alt="Desenho Wallace Felix - Pokémon">
+                    <p>"Esse vai pro quadro kkkkk top!" — Wallace Felix</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Vídeos em Destaque</h2>
+            <div class="videos">
+                <video src="CURSO DE DESENHO PROPAGANDA.mp4" controls preload="none" poster="foto-dele-1.jpg"
+                    style=" padding: 1%;  width:320px; height:180px; border-radius:1rem; box-shadow:0 4px 16px rgba(0,0,0,0.2);"></video>
+                <video src="Curso-DESENHE-AGORA-SEJA-COMO-ELES-Venha-Fazer-parte-dessa-FAMÍLIA.mp4" controls
+                    preload="none" poster="foto-dele-2.jpg"
+                    style=" padding: 1%; width:320px; height:180px; border-radius:1rem; box-shadow:0 4px 16px rgba(0,0,0,0.2);"></video>
+                <video src="O-Melhor-treinamento-de desenho-ONLINE.mp4" controls preload="none" poster="foto-dele-3.jpg"
+                    style="  padding: 1%; width:320px; height:180px; border-radius:1rem; box-shadow:0 4px 16px rgba(0,0,0,0.2);"></video>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>FAQ - Perguntas Frequentes</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <button class="faq-question">O curso é para iniciantes?</button>
+                    <div class="faq-answer">
+                        <p>Sim! Mesmo quem nunca desenhou antes pode acompanhar o curso e evoluir rapidamente com as
+                            técnicas exclusivas de Gilmar Marcel.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Recebo certificado?</button>
+                    <div class="faq-answer">
+                        <p>Sim, ao concluir o curso, você receberá um certificado de conclusão válido e reconhecido no
+                            mercado artístico.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Posso acessar pelo celular?</button>
+                    <div class="faq-answer">
+                        <p>Com certeza! O curso é 100% responsivo, podendo ser acessado por celulares, tablets ou
+                            computadores, onde e quando quiser.</p>
+                    </div>
+                </div>
+                <a href="https://go.hotmart.com/I99296302M?dp=1" target="_blank">
+                    <button>Compre Agora</button>
+                </a>
+            </div>
+        </section>
+
+        <script>
+            const faqItems = document.querySelectorAll('.faq-question');
+            faqItems.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const answer = btn.nextElementSibling;
+                    answer.classList.toggle('active');
+                    btn.classList.toggle('active');
+                });
+            });
+        </script>
+
+        <style>
+            .faq-item {
+                border-bottom: 1px solid #ccc;
+                padding: 1rem 0;
+            }
+
+            .faq-question {
+                width: 100%;
+                text-align: left;
+                background: none;
+                border: none;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #5A4A3F;
+                cursor: pointer;
+                padding: 0.5rem 0;
+                transition: 0.3s ease;
+            }
+
+            .faq-question.active {
+                color: #D4AF37;
+            }
+
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+            }
+
+            .faq-answer.active {
+                max-height: 500px;
+                padding-top: 0.5rem;
+            }
+
+            .faq-answer p {
+                margin: 0;
+                color: #6B5C51;
+            }
+        </style>
+
+
+
+        <footer>
+            &copy; 2025 Curso de Desenho Profissional ministrado por Gilmar Marcel. Todos os direitos reservados.
+        </footer>
+</body>
+
+</html>
