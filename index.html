@@ -77,22 +77,57 @@
         }
 
 
+        @keyframes bounceButton {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-12px);
+            }
+
+            60% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         button {
             background: linear-gradient(90deg, #D4AF37, #6B5C51);
             color: white;
             border: none;
-            padding: 1rem 2.5rem;
-            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 3rem;
+            border-radius: 2.5rem;
             cursor: pointer;
+            margin-top: 2rem;
             transition: 0.3s ease;
+
+            animation: fadeInUp 0.8s ease forwards, bounceButton 2.5s infinite;
         }
 
         button:hover {
-            transform: scale(1.08);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.12) rotate(-1deg);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
         }
+
 
         section {
             padding: 4rem 2rem;
@@ -182,12 +217,86 @@
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1rem 2rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            header p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .preco {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            .preco .por {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            button {
+                width: 100%;
+                font-size: 1rem;
+                padding: 1rem;
+                border-radius: 0.5rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+                margin: 0 auto;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+                text-align: center;
+            }
+
+            .depoimentos {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .videos {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .videos video {
+                width: 100%;
+                max-width: 320px;
+                border-radius: 0.5rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            .faq-answer p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <video src="nova-propaganda_cxoZJLxa.mp4" controls preload="none"
+        <video src="Nova propaganda.mp4" controls preload="none"
             poster="347605437_764179052378668_8550257514391535097_n.jpg"
             style="  border-radius: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.2); width: 320px; height: 180px; object-fit: cover;"></video>
         <h1>Transforme Seu Talento em Arte com Gilmar Marcel</h1>
@@ -243,12 +352,12 @@
         <section>
             <h2>Vídeos em Destaque</h2>
             <div class="videos">
-                <video src="curso-de-desenho-propaganda_m4gAHbjX.mp4" controls preload="none" poster="foto-dele-1.jpg"
+                <video src="CURSO DE DESENHO PROPAGANDA.mp4" controls preload="none" poster="foto-dele-1.jpg"
                     style=" padding: 1%;  width:320px; height:180px; border-radius:1rem; box-shadow:0 4px 16px rgba(0,0,0,0.2);"></video>
-                <video src="curso-desenhe-agora-seja-como-eles-venha-fazer-parte-dessa-familia_jJzki8di.mp4" controls
+                <video src="Curso-DESENHE-AGORA-SEJA-COMO-ELES-Venha-Fazer-parte-dessa-FAMÍLIA.mp4" controls
                     preload="none" poster="foto-dele-2.jpg"
                     style=" padding: 1%; width:320px; height:180px; border-radius:1rem; box-shadow:0 4px 16px rgba(0,0,0,0.2);"></video>
-                <video src="o-melhor-treinamento-de-desenho-online_l61mMqRd.mp4" controls preload="none" poster="foto-dele-3.jpg"
+                <video src="O-Melhor-treinamento-de desenho-ONLINE.mp4" controls preload="none" poster="foto-dele-3.jpg"
                     style="  padding: 1%; width:320px; height:180px; border-radius:1rem; box-shadow:0 4px 16px rgba(0,0,0,0.2);"></video>
             </div>
         </section>
